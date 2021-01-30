@@ -27,7 +27,7 @@
        			do begin
          			@ (posedge vif.pclk);
          		end
-         		while (vif.psel !== 1'b1 || vif.penable !== 1'b0);
+         		while (vif.psel !== 1'b1);
 
         		tr = apb_transaction::type_id::create("tr", this);
 	        
