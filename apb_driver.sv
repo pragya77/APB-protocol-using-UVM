@@ -27,8 +27,7 @@
 
 	      		seq_item_port.get_next_item(tr);
       			@ (posedge this.vif.pclk);
-      			uvm_report_info("APB_DRIVER ", $psprintf("Got Transaction %s",tr.convert2string()));
-     	 
+  
       			case (tr.pwrite)
         			apb_transaction::READ:  drive_read(tr.addr, tr.data);  
         			apb_transaction::WRITE: drive_write(tr.addr, tr.data);
